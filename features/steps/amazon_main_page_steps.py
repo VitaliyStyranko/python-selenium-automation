@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 from behave import given, when, then
 from selenium.webdriver.support import expected_conditions as EC
-from features.steps.amazon_main_page_step import SEARCH_INPUT
+from features.steps.amazon_main_page_stepss import SEARCH_INPUT
 
 
 @given('Open amazon page')
