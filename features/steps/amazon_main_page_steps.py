@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 from behave import given, when, then
 from selenium.webdriver.support import expected_conditions as EC
-from features.steps.amazon_main_page_stepss import SEARCH_INPUT
+
 
 
 @given('Open amazon page')
@@ -19,11 +19,9 @@ def select_department(context, selection_value):
     context.app.main_page.select_department(selection_value)
 
 
-@then('Search for {search_word}')
-def search_product(context, search_word):
-    search = context.driver.find_element(*SEARCH_INPUT)
-    search.clear()
-    search.send_keys(search_word)
+@then('Search for {product}')
+def search_product(context, product):
+    context.app.main_page.search_product(product)
 
 
 @then('Click on search btn')
